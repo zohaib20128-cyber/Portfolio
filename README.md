@@ -39,9 +39,9 @@ Geopolitical explainer edit — layered data (uranium stockpile figures) visuali
 
 **TikTok**
 
-<img width="1080" height="1920" alt="1786709978548 jpg" src="https://github.com/user-attachments/assets/105949a7-77a3-41da-bb18-a2135afe6eea" />
+<a href="https://www.tiktok.com/@zohaib.zaryab/video/7499461610541616386"><img width="200" src="https://github.com/user-attachments/assets/105949a7-77a3-41da-bb18-a2135afe6eea" alt="Pakistan's Missiles"></a>
 
-[Pakistan's Missiles](https://www.tiktok.com/@zohaib.zaryab/video/7499461610541616386)
+**Pakistan's Missiles**
 Fast-paced defense showcase edit with dynamic cuts and on-screen stat overlays.
 
 <img width="1080" height="1920" alt="1786709682455 jpg" src="https://github.com/user-attachments/assets/43c50e40-44e6-4ebc-9b06-fa9332ac44c7" />
