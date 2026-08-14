@@ -22,9 +22,9 @@ Investigative documentary edit — b-roll sourcing, on-screen text hierarchy, an
 **Fattah Missile**
 Fast-cut defense/military reel — dynamic typography and pacing built for high-retention scrolling.
 
-<img width="1080" height="1920" alt="1786709742713 jpg" src="https://github.com/user-attachments/assets/6479ce34-5d6b-4055-8e06-755ebe123c89" />
+<a href="https://www.instagram.com/reel/DYZ9U3bMV_d/"><img width="200" src="https://github.com/user-attachments/assets/6479ce34-5d6b-4055-8e06-755ebe123c89" alt="Where Does Your GST Actually Go?"></a>
 
-[Where Does Your GST Actually Go?](https://www.instagram.com/reel/DYZ9U3bMV_d/)
+**Where Does Your GST Actually Go?**
 Data-driven storytelling — breaking down a Rs 500-600 billion tax leakage figure with clear on-screen numbers and pacing to hold attention through a dry topic.
 
 <img width="1080" height="1920" alt="1786709709857 jpg" src="https://github.com/user-attachments/assets/04252f1f-d54a-466b-aca6-1e48e0908e7e" />
