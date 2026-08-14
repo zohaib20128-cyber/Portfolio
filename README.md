@@ -92,3 +92,17 @@ https://github.com/user-attachments/assets/bb76acaf-fc4b-40dd-9494-a450507bcb1a
 - **Instagram:** 2,117 followers
 - **YouTube:** 4,670+ Subscribers
 - **Facebook:** 17,000+ followers
+
+
+  ---
+
+## 🔗 Connect With Me
+
+- **Instagram:** [@_zohaibzaryab](https://www.instagram.com/_zohaibzaryab?utm_source=qr&igsh=MXQ1aXlzZ3Frc2R3Yw==)
+- **TikTok:** [@zohaib.zaryab](https://www.tiktok.com/@zohaib.zaryab?_r=1&_t=ZN-98sQHu9JeoY)
+- **YouTube:** [ZohaibZaryab](https://youtube.com/@zohaibzaryab?si=ogAMbjbM9Ux78aqq)
+- **LinkedIn:** [Zohaib Zaryab](https://www.linkedin.com/in/zohaib-zaryab-356599351/)
+- **Email:** [zohaibdesigns0@gmail.com](mailto:zohaibdesigns0@gmail.com)
+- **WhatsApp:** [Chat on WhatsApp](https://wa.me/03706397005)
+
+📩 **Available for freelance video editing & content editing projects.**
