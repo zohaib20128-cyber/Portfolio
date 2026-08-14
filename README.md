@@ -17,7 +17,7 @@ Investigative documentary edit — b-roll sourcing, on-screen text hierarchy, an
 
 **Instagram**
 
-<a href="https://www.instagram.com/reel/DLJioYOIx1l/"><img width="300" src="https://github.com/user-attachments/assets/e65d8895-41ff-4377-86f8-88d0b1c8467e" alt="Fattah Missile"></a>
+<a href="https://www.instagram.com/reel/DLJioYOIx1l/"><img width="200" src="https://github.com/user-attachments/assets/e65d8895-41ff-4377-86f8-88d0b1c8467e" alt="Fattah Missile"></a>
 
 **Fattah Missile**
 Fast-cut defense/military reel — dynamic typography and pacing built for high-retention scrolling.
