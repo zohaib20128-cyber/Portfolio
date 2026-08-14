@@ -32,7 +32,7 @@ Data-driven storytelling — breaking down a Rs 500-600 billion tax leakage figu
 **NEET Paper Leak — Minister Resigns?**
 News-commentary edit — fast breaking-news format with hook-driven opening and on-screen text hierarchy.
 
-<a href=https://www.instagram.com/reel/Da2UiLWMXa_/"><img width="200" src="https://github.com/user-attachments/assets/9f85115f-ea92-47a6-bb89-a0834dbeee60" alt="Iran's Nuclear Edge"></a>
+<a href="https://www.instagram.com/reel/Da2UiLWMXa_/"><img width="200" src="https://github.com/user-attachments/assets/9f85115f-ea92-47a6-bb89-a0834dbeee60" alt="Iran's Nuclear Edge"></a>
 
 **Iran's Nuclear Edge**
 Geopolitical explainer edit — layered data (uranium stockpile figures) visualized with motion graphics and suspenseful pacing.
