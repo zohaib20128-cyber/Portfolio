@@ -16,8 +16,7 @@ This portfolio showcases selected projects from my own content — demonstrating
 
 ## 🎥 Documentary-Style Long-Form Editing
 
-[![Youm-e-Takbeer — Dr. AQ Khan Story]
-(https://img.youtube.com/vi/WjQGGytOfGQ/hqdefault.jpg)](https://youtu.be/WjQGGytOfGQ)
+[![Youm-e-Takbeer — Dr. AQ Khan Story](https://img.youtube.com/vi/WjQGGytOfGQ/hqdefault.jpg)](https://youtu.be/WjQGGytOfGQ)
 **Youm-e-Takbeer — The Story of Dr. Abdul Qadeer Khan**
 Narrative-driven documentary edit — archival footage integration, emotional pacing, and voiceover-synced visuals to tell a national history story.
 
