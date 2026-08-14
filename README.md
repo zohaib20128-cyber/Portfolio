@@ -38,7 +38,7 @@ Investigative documentary edit — b-roll sourcing, on-screen text hierarchy, an
 
 ## ⚡ Fast-Paced Short-Form Editing (News, Geopolitics & Accountability)
 
-**Instagram**
+##Instagram
 
 
 <a href="https://www.instagram.com/reel/DLJioYOIx1l/"><img width="200" src="https://github.com/user-attachments/assets/e65d8895-41ff-4377-86f8-88d0b1c8467e" alt="Fattah Missile"></a>
@@ -65,7 +65,7 @@ News-commentary edit — fast breaking-news format with hook-driven opening and 
 Geopolitical explainer edit — layered data (uranium stockpile figures) visualized with motion graphics and suspenseful pacing.
 
 
-**TikTok**
+##TikTok
 
 <a href="https://www.tiktok.com/@zohaib.zaryab/video/7499461610541616386"><img width="200" src="https://github.com/user-attachments/assets/105949a7-77a3-41da-bb18-a2135afe6eea" alt="Pakistan's Missiles"></a>
 
