@@ -12,3 +12,49 @@ Explainer-style edit combining data visualization, motion graphics, and pacing t
 [![Why Lahore is the Most Polluted City](https://img.youtube.com/vi/d_quueRd4Jk/hqdefault.jpg)](https://youtu.be/d_quueRd4Jk)
 **Why Lahore is the Most Polluted City in the World**
 Investigative documentary edit — b-roll sourcing, on-screen text hierarchy, and pacing built around a local environmental crisis narrative.
+
+## ⚡ Fast-Paced Short-Form Editing (News, Geopolitics & Accountability)
+
+**Instagram**
+
+[Fattah Missile](https://www.instagram.com/reel/DLJioYOIx1l/)
+Fast-cut defense/military reel — dynamic typography and pacing built for high-retention scrolling.
+
+[Where Does Your GST Actually Go?](https://www.instagram.com/reel/DYZ9U3bMV_d/)
+Data-driven storytelling — breaking down a Rs 500-600 billion tax leakage figure with clear on-screen numbers and pacing to hold attention through a dry topic.
+
+[NEET Paper Leak — Minister Resigns](https://www.instagram.com/reel/DbOvGMIMZE9/)
+News-commentary edit — fast breaking-news format with hook-driven opening and on-screen text hierarchy.
+
+[Iran's Nuclear Edge](https://www.instagram.com/reel/Da2UiLWMXa_/)
+Geopolitical explainer edit — layered data (uranium stockpile figures) visualized with motion graphics and suspenseful pacing.
+
+**TikTok**
+
+[Pakistan's Missiles](https://www.tiktok.com/@zohaib.zaryab/video/7499461610541616386)
+Fast-paced defense showcase edit with dynamic cuts and on-screen stat overlays.
+
+[The Hidden Cost of Your Electricity Bill](https://www.tiktok.com/@zohaib.zaryab/video/7644518090587327766)
+Complex utility-billing breakdown simplified through data visualization and structured pacing — same retention-first approach as the tax series.
+
+[New World Order](https://www.tiktok.com/@zohaib.zaryab/video/7627542972589935894)
+Geopolitical macro-narrative edit — big-picture storytelling paced for a broad audience.
+
+[Karakoram Highway](https://www.tiktok.com/@zohaib.zaryab/video/7532471386216959234)
+Travel/infrastructure documentary-style edit — visual storytelling and pacing for a scenic long-form narrative in short-form format.
+
+---
+
+## 🏆 Recognition & Achievements
+
+**IM4Climate Punjab — Top-Performing Creator**
+Selected as a top performer in the IM4Climate program (Environmental Protection & Climate Change Department, Government of Punjab). Produced a climate-awareness video on Pakistan's flood crisis that crossed 500K+ views, earning a cheque award and official recognition at the program's 1st ceremony (December 5, 2025).
+
+---
+
+## 📊 Reach & Audience
+
+- **TikTok:** 10,000+ followers · 138 videos · 700K+ total likes · 400K+ views in the last 60 days alone
+- **Instagram:** 2,117 followers
+- **YouTube:** 4,670+ Subscribers
+- **Facebook:** 17,000+ followers
