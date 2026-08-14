@@ -27,14 +27,14 @@ Fast-cut defense/military reel — dynamic typography and pacing built for high-
 **Where Does Your GST Actually Go?**
 Data-driven storytelling — breaking down a Rs 500-600 billion tax leakage figure with clear on-screen numbers and pacing to hold attention through a dry topic.
 
-<img width="1080" height="1920" alt="1786709709857 jpg" src="https://github.com/user-attachments/assets/04252f1f-d54a-466b-aca6-1e48e0908e7e" />
+<a href="https://www.instagram.com/reel/DbOvGMIMZE9/"><img width="200" src="https://github.com/user-attachments/assets/04252f1f-d54a-466b-aca6-1e48e0908e7e" alt="NEET Paper Leak — Minister Resigns"></a>
 
-[NEET Paper Leak — Minister Resigns](https://www.instagram.com/reel/DbOvGMIMZE9/)
+**NEET Paper Leak — Minister Resigns?**
 News-commentary edit — fast breaking-news format with hook-driven opening and on-screen text hierarchy.
 
-<img width="1080" height="1920" alt="1786709695948 jpg" src="https://github.com/user-attachments/assets/9f85115f-ea92-47a6-bb89-a0834dbeee60" />
+<a href=https://www.instagram.com/reel/Da2UiLWMXa_/"><img width="200" src="https://github.com/user-attachments/assets/9f85115f-ea92-47a6-bb89-a0834dbeee60" alt="Iran's Nuclear Edge"></a>
 
-[Iran's Nuclear Edge](https://www.instagram.com/reel/Da2UiLWMXa_/)
+**Iran's Nuclear Edge**
 Geopolitical explainer edit — layered data (uranium stockpile figures) visualized with motion graphics and suspenseful pacing.
 
 **TikTok**
