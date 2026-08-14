@@ -1,4 +1,19 @@
-# Portfolio
+**Portfolio**
+
+# Zohaib Zaryab
+
+### Video Editor | Short-Form & Documentary Content
+
+I’m a video editor and content creator focused on turning ideas, raw footage, and information into engaging visual stories.
+
+I specialize in **short-form content, documentary-style videos, news and geopolitical content, motion graphics, and retention-focused editing**. My editing approach combines strong hooks, pacing, visual storytelling, typography, sound design, and motion graphics to keep viewers engaged.
+
+Alongside editing for my own content, I’ve built and managed content across multiple social media platforms, reaching **10K+ TikTok followers, 17K+ Facebook followers, 2K+ Instagram followers, and 4K+ YouTube subscribers**.
+
+This portfolio showcases selected projects from my own content — demonstrating my ability to edit for **retention, storytelling, clarity, and visual impact**.
+
+**Currently available for freelance video editing and content editing projects.**
+
 ## 🎥 Documentary-Style Long-Form Editing
 
 [![Youm-e-Takbeer — Dr. AQ Khan Story](https://img.youtube.com/vi/WjQGGytOfGQ/hqdefault.jpg)](https://youtu.be/WjQGGytOfGQ)
