@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zohaib Zaryab — Video Editor Portfolio</title>
+<meta name="description" content="Video editor portfolio — documentary, short-form, motion graphics & data storytelling.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0A0C0F;
+    --bg-panel:#111417;
+    --bg-card:#171B20;
+    --border:#242A31;
+    --border-soft:#1D2228;
+    --text:#EDEBE6;
+    --text-dim:#8C939B;
+    --text-faint:#5B6169;
+    --accent:#FF4B4B;
+    --accent-dim:#7A2E2E;
+    --teal:#5EEAD4;
+    --amber:#FFB454;
+    --radius:3px;
+    --mono:'JetBrains Mono',monospace;
+    --display:'Space Grotesk',sans-serif;
+    --body:'Inter',sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--body);
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  a{color:inherit;text-decoration:none;}
+  img{display:block;max-width:100%;}
+
+  /* scrub bar */
+  .scrub-track{position:fixed;top:0;left:0;width:100%;height:3px;background:var(--border-soft);z-index:200;}
+  .scrub-fill{height:100%;width:0%;background:linear-gradient(90deg,var(--accent),var(--amber));transition:width .1s linear;}
+
+  /* nav */
+  nav{
+    position:sticky;top:3px;z-index:150;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:16px 6vw;background:rgba(10,12,15,.88);backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--border-soft);
+    font-family:var(--mono);font-size:12px;letter-spacing:.03em;
+  }
+  .nav-brand{color:var(--text);font-weight:500;}
+  .nav-brand span{color:var(--accent);}
+  .nav-links{display:flex;gap:22px;color:var(--text-dim);}
+  .nav-links a:hover{color:var(--teal);}
+  @media(max-width:820px){.nav-links{display:none;}}
+
+  section{padding:90px 6vw;position:relative;}
+  .label{
+    font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--accent);margin-bottom:10px;display:flex;align-items:center;gap:10px;
+  }
+  .label::before{content:'';width:24px;height:1px;background:var(--accent);}
+  .label.teal{color:var(--teal);}
+  .label.teal::before{background:var(--teal);}
+  .label.amber{color:var(--amber);}
+  .label.amber::before{background:var(--amber);}
+
+  h2.section-title{
+    font-family:var(--display);font-weight:700;font-size:clamp(28px,4vw,42px);
+    margin-bottom:14px;
+  }
+  .section-desc{color:var(--text-dim);max-width:620px;margin-bottom:48px;font-size:15px;}
+
+  /* HERO */
+  .hero{
+    min-height:92vh;display:flex;flex-direction:column;justify-content:center;
+    padding-top:60px;
+  }
+  .hero-tag{
+    font-family:var(--mono);font-size:12px;color:var(--text-dim);
+    display:inline-flex;align-items:center;gap:8px;margin-bottom:28px;
+    border:1px solid var(--border);padding:6px 12px;border-radius:20px;width:fit-content;
+  }
+  .rec-dot{width:7px;height:7px;border-radius:50%;background:var(--accent);animation:pulse 1.8s infinite;}
+  @keyframes pulse{0%,100%{opacity:1;}50%{opacity:.25;}}
+  h1.hero-name{
+    font-family:var(--display);font-weight:700;
+    font-size:clamp(44px,9vw,96px);line-height:.98;letter-spacing:-.02em;
+  }
+  .hero-role{
+    font-family:var(--mono);color:var(--teal);font-size:clamp(14px,2vw,18px);
+    margin-top:18px;letter-spacing:.02em;
+  }
+  .hero-bio{max-width:640px;color:var(--text-dim);margin-top:24px;font-size:16px;}
+  .hero-cta{display:flex;gap:14px;margin-top:36px;flex-wrap:wrap;}
+  .btn{
+    font-family:var(--mono);font-size:13px;padding:13px 22px;border-radius:var(--radius);
+    border:1px solid var(--border);transition:.2s;
+  }
+  .btn-primary{background:var(--accent);border-color:var(--accent);color:#0A0C0F;font-weight:700;}
+  .btn-primary:hover{background:#ff6a6a;}
+  .btn-ghost:hover{border-color:var(--teal);color:var(--teal);}
+
+  .timeline-ruler{
+    margin-top:64px;display:flex;align-items:flex-end;gap:2px;height:44px;
+    border-top:1px solid var(--border-soft);padding-top:10px;
+  }
+  .tick{flex:1;background:var(--border-soft);height:8px;}
+  .tick:nth-child(4n){height:16px;background:var(--text-faint);}
+  .tick:nth-child(8n){height:26px;background:var(--accent-dim);}
+
+  /* GRID / CARDS */
+  .grid{display:grid;gap:22px;}
+  .grid.wide{grid-template-columns:repeat(auto-fit,minmax(280px,1fr));}
+  .grid.narrow{grid-template-columns:repeat(auto-fit,minmax(170px,1fr));}
+
+  .clip{
+    background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);
+    overflow:hidden;position:relative;
+    opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease;
+  }
+  .clip.in-view{opacity:1;transform:translateY(0);}
+  .clip-media{position:relative;overflow:hidden;background:#000;}
+  .clip-media.ratio-land{aspect-ratio:16/9;}
+  .clip-media.ratio-port{aspect-ratio:9/14;}
+  .clip-media img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease;}
+  .clip:hover .clip-media img{transform:scale(1.06);}
+  .clip-media::after{
+    content:'';position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(0,0,0,0) 55%,rgba(0,0,0,.75) 100%);
+  }
+  .play-badge{
+    position:absolute;top:10px;left:10px;width:30px;height:30px;border-radius:50%;
+    background:rgba(10,12,15,.7);border:1px solid rgba(255,255,255,.2);
+    display:flex;align-items:center;justify-content:center;z-index:2;
+    backdrop-filter:blur(4px);
+  }
+  .play-badge::after{
+    content:'';border-left:9px solid var(--text);border-top:5px solid transparent;
+    border-bottom:5px solid transparent;margin-left:2px;
+  }
+  .clip-body{padding:16px 18px 20px;border-top:2px solid var(--border);}
+  .clip-tc{font-family:var(--mono);font-size:10px;color:var(--text-faint);margin-bottom:6px;letter-spacing:.05em;}
+  .clip-title{font-family:var(--display);font-weight:700;font-size:16px;margin-bottom:8px;}
+  .clip-caption{font-size:13px;color:var(--text-dim);line-height:1.55;}
+  .clip a.stretch{position:absolute;inset:0;z-index:3;}
+
+  /* placeholder card */
+  .clip.placeholder{
+    display:flex;align-items:center;justify-content:center;text-align:center;
+    border:1px dashed var(--border);background:transparent;min-height:220px;padding:24px;
+  }
+  .clip.placeholder .ph-inner{color:var(--text-faint);}
+  .clip.placeholder .ph-inner strong{display:block;color:var(--text-dim);font-family:var(--display);font-size:15px;margin-bottom:6px;}
+
+  /* Recognition */
+  .recognition-wrap{
+    display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:stretch;
+  }
+  @media(max-width:820px){.recognition-wrap{grid-template-columns:1fr;}}
+  .award-card{
+    background:var(--bg-card);border:1px solid var(--amber);border-radius:var(--radius);
+    padding:32px;position:relative;
+  }
+  .award-card::before{
+    content:'AWARD';position:absolute;top:-11px;left:24px;background:var(--bg);
+    padding:0 10px;font-family:var(--mono);font-size:11px;color:var(--amber);letter-spacing:.1em;
+  }
+  .award-title{font-family:var(--display);font-weight:700;font-size:22px;margin-bottom:14px;}
+  .award-text{color:var(--text-dim);font-size:14px;margin-bottom:18px;}
+  .award-stat-row{display:flex;gap:24px;font-family:var(--mono);flex-wrap:wrap;}
+  .award-stat b{display:block;color:var(--amber);font-size:20px;}
+  .award-stat span{font-size:11px;color:var(--text-faint);}
+  .recog-media{display:flex;flex-direction:column;gap:16px;}
+  .recog-media img{border-radius:var(--radius);border:1px solid var(--border);}
+  .recog-media video{width:100%;border-radius:var(--radius);border:1px solid var(--border);background:#000;}
+
+  /* Reach stats */
+  .stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);}
+  .stat-cell{background:var(--bg-panel);padding:28px 22px;}
+  .stat-num{font-family:var(--display);font-weight:700;font-size:30px;color:var(--teal);}
+  .stat-label{font-family:var(--mono);font-size:11px;color:var(--text-dim);margin-top:6px;letter-spacing:.04em;text-transform:uppercase;}
+  .meter{height:4px;background:var(--border-soft);margin-top:14px;overflow:hidden;}
+  .meter i{display:block;height:100%;background:var(--teal);}
+
+  /* footer / contact */
+  footer{
+    background:var(--bg-panel);border-top:1px solid var(--border-soft);
+    padding:70px 6vw 40px;
+  }
+  .footer-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:40px;margin-bottom:50px;}
+  .footer-cta h2{font-family:var(--display);font-weight:700;font-size:clamp(26px,4vw,38px);max-width:560px;}
+  .footer-cta p{color:var(--text-dim);margin-top:12px;max-width:480px;}
+  .footer-links{display:flex;flex-direction:column;gap:10px;font-family:var(--mono);font-size:13px;}
+  .footer-links a{color:var(--text-dim);}
+  .footer-links a:hover{color:var(--teal);}
+  .footer-bottom{
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;
+    padding-top:24px;border-top:1px solid var(--border-soft);
+    font-family:var(--mono);font-size:11px;color:var(--text-faint);
+  }
+
+  @media(prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important;}
+    .clip{opacity:1;transform:none;}
+  }
+</style>
+</head>
+<body>
+
+<div class="scrub-track"><div class="scrub-fill" id="scrubFill"></div></div>
+
+<nav>
+  <div class="nav-brand">ZOHAIB<span>_</span>ZARYAB.mp4</div>
+  <div class="nav-links">
+    <a href="#documentary">01 Documentary</a>
+    <a href="#shortform">02 Short-Form</a>
+    <a href="#motion">03 Motion & Data</a>
+    <a href="#camera3d">04 3D Camera</a>
+    <a href="#recognition">05 Recognition</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-tag"><span class="rec-dot"></span>AVAILABLE FOR FREELANCE PROJECTS</div>
+  <h1 class="hero-name">ZOHAIB<br>ZARYAB</h1>
+  <div class="hero-role">// video_editor — short_form · documentary · motion_graphics · retention_editing</div>
+  <p class="hero-bio">I turn ideas, raw footage, and information into engaging visual stories — combining strong hooks, pacing, typography, sound design, and motion graphics to keep viewers watching. This portfolio showcases selected projects from my own content, organized by editing discipline rather than by platform.</p>
+  <div class="hero-cta">
+    <a class="btn btn-primary" href="https://wa.me/+923706397005">Chat on WhatsApp</a>
+    <a class="btn btn-ghost" href="mailto:zohaibdesigns0@gmail.com">zohaibdesigns0@gmail.com</a>
+  </div>
+  <div class="timeline-ruler" aria-hidden="true">
+    <div class="tick"></div><div class="tick"></div><div class="tick"></div><div class="tick"></div>
+    <div class="tick"></div><div class="tick"></div><div class="tick"></div><div class="tick"></div>
+    <div class="tick"></div><div class="tick"></div><div class="tick"></div><div class="tick"></div>
+    <div class="tick"></div><div class="tick"></div><div class="tick"></div><div class="tick"></div>
+    <div class="tick"></div><div class="tick"></div><div class="tick"></div><div class="tick"></div>
+    <div class="tick"></div><div class="tick"></div><div class="tick"></div><div class="tick"></div>
+  </div>
+</section>
+
+<!-- DOCUMENTARY -->
+<section id="documentary">
+  <div class="label">Track 01 — Long-Form</div>
+  <h2 class="section-title">Documentary-Style Editing</h2>
+  <p class="section-desc">Narrative pacing, archival footage integration, and investigative structure for long-form YouTube storytelling.</p>
+  <div class="grid wide">
+
+    <div class="clip">
+      <a class="stretch" href="https://youtu.be/WjQGGytOfGQ" target="_blank" rel="noopener"></a>
+      <div class="clip-media ratio-land">
+        <div class="play-badge"></div>
+        <img src="https://img.youtube.com/vi/WjQGGytOfGQ/hqdefault.jpg" alt="Youm-e-Takbeer — Dr. AQ Khan Story" loading="lazy">
+      </div>
+      <div class="clip-body">
+        <div class="clip-tc">YOUTUBE // LONG-FORM</div>
+        <div class="clip-title">Youm-e-Takbeer — The Story of Dr. Abdul Qadeer Khan</div>
+        <div class="clip-caption">Narrative-driven documentary edit — archival footage integration, emotional pacing, and voiceover-synced visuals to tell a national history story.</div>
+      </div>
+    </div>
+
+    <div class="clip">
+      <a class="stretch" href="https://youtu.be/4xGNdqa5MRY" target="_blank" rel="noopener"></a>
+      <div class="clip-media ratio-land">
+        <div class="play-badge"></div>
+        <img src="https://img.youtube.com/vi/4xGNdqa5MRY/hqdefault.jpg" alt="Climate Change Explained" loading="lazy">
+      </div>
+      <div class="clip-body">
+        <div class="clip-tc">YOUTUBE // LONG-FORM</div>
+        <div class="clip-title">Understanding Rising Temperatures — Climate Change Explained</div>
+        <div class="clip-caption">Explainer-style edit combining data visualization, motion graphics, and pacing to simplify a complex scientific topic for a general audience.</div>
+      </div>
+    </div>
+
+    <div class="clip">
+      <a class="stretch" href="https://youtu.be/d_quueRd4Jk" target="_blank" rel="noopener"></a>
+      <div class="clip-media ratio-land">
+        <div class="play-badge"></div>
+        <img src="https://img.youtube.com/vi/d_quueRd4Jk/hqdefault.jpg" alt="Why Lahore is the Most Polluted City" loading="lazy">
+      </div>
+      <div class="clip-body">
+        <div class="clip-tc">YOUTUBE // LONG-FORM</div>
+        <div class="clip-title">Why Lahore is the Most Polluted City in the World</div>
+        <div class="clip-caption">Investigative documentary edit — b-roll sourcing, on-screen text hierarchy, and pacing built around a local environmental crisis narrative.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SHORT FORM -->
+<section id="shortform">
+  <div class="label teal">Track 02 — Short-Form</div>
+  <h2 class="section-title">Retention Editing</h2>
+  <p class="section-desc">Fast-cut, hook-driven news and geopolitics content built for scroll-stopping retention on Instagram &amp; TikTok.</p>
+  <div class="grid narrow">
+
+    <div class="clip">
+      <a class="stretch" href="https://www.instagram.com/reel/DLJioYOIx1l/" target="_blank" rel="noopener"></a>
+      <div class="clip-media ratio-port">
+        <div class="play-badge"></div>
+        <img src="https://github.com/user-attachments/assets/e65d8895-41ff-4377-86f8-88d0b1c8467e" alt="Fattah Missile" loading="lazy">
+      </div>
+      <div class="clip-body">
+        <div class="clip-tc">INSTAGRAM // REEL</div>
+        <div class="clip-title">Fattah Missile</div>
+        <div class="clip-caption">Fast-cut defense/military reel — dynamic typography and pacing built for high-retention scrolling.</div>
+      </div>
+    </div>
+
+    <div class="clip">
+      <a class="stretch" href="https://www.instagram.com/reel/DbOvGMIMZE9/" target="_blank" rel="noopener"></a>
+      <div class="clip-media ratio-port">
+        <div class="play-badge"></div>
+        <img src="https://github.com/user-attachments/assets/04252f1f-d54a-466b-aca6-1e48e0908e7e" alt="NEET Paper Leak — Minister Resigns" loading="lazy">
+      </div>
+      <div class="clip-body">
+        <div class="clip-tc">INSTAGRAM // REEL</div>
+        <div class="clip-title">NEET Paper Leak — Minister Resigns?</div>
+        <div class="clip-caption">News-commentary edit — fast breaking-news format with hook-driven opening and on-screen text hierarchy.</div>
+      </div>
+    </div>
+
+    <div class="clip">
+      <a class="stretch" href="https://www.tiktok.com/@zohaib.zaryab/video/7499461610541616386" target="_blank" rel="noopener"></a>
+      <div class="clip-media ratio-port">
+        <div class="play-badge"></div>
+        <img src="https://github.com/user-attachments/assets/105949a7-77a3-41da-bb18-a2135afe6eea" alt="Pakistan's Missiles" loading="lazy">
+      </div>
+      <div class="clip-body">
+        <div class="clip-tc">TIKTOK // VIDEO</div>
+        <div class="clip-title">Pakistan's Missiles</div>
+        <div class="clip-caption">Fast-paced defense showcase edit with dynamic cuts and on-screen stat overlays.</div>
+      </div>
+    </div>
+
+    <div class="clip">
+      <a class="stretch" href="https://www.tiktok.com/@zohaib.zaryab/video/7627542972589935894" target="_blank" rel="noopener"></a>
+      <div class="clip-media ratio-port">
+        <div class="play-badge"></div>
+        <img src="https://github.com/user-attachments/assets/3beb1dc8-873b-41a0-9bb6-62c3dd5ec711" alt="New World Order" loading="lazy">
+      </div>
+      <div class="clip-body">
+        <div class="clip-tc">TIKTOK // VIDEO</div>
+        <div class="clip-title">New World Order</div>
+        <div class="clip-caption">Geopolitical macro-narrative edit — big-picture storytelling paced for a broad audience.</div>
+      </div>
+    </div>
+
+    <div class="clip">
+      <a class="stretch" href="https://www.tiktok.com/@zohaib.zaryab/video/7532471386216959234" target="_blank" rel="noopener"></a>
+      <div class="clip-media ratio-port">
+        <div class="play-badge"></div>
+        <img src="https://github.com/user-attachments/assets/16f462a2-0ff7-437f-9fe4-ef9b6465552b" alt="Karakoram Highway" loading="lazy">
+      </div>
+      <div class="clip-body">
+        <div class="clip-tc">TIKTOK // VIDEO</div>
+        <div class="clip-title">Karakoram Highway</div>
+        <div class="clip-caption">Travel/infrastructure documentary-style edit — visual storytelling and pacing for a scenic long-form narrative in short-form format.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- MOTION GRAPHICS & DATA -->
+<section id="motion">
+  <div class="label amber">Track 03 — Data Storytelling</div>
+  <h2 class="section-title">Motion Graphics &amp; Data Storytelling</h2>
+  <p class="section-desc">Where the edit's job is to make numbers legible — on-screen figures, motion graphics, and pacing built around data.</p>
+  <div class="grid narrow">
+
+    <div class="clip">
+      <a class="stretch" href="https://www.instagram.com/reel/DYZ9U3bMV_d/" target="_blank" rel="noopener"></a>
+      <div class="clip-media ratio-port">
+        <div class="play-badge"></div>
+        <img src="https://github.com/user-attachments/assets/6479ce34-5d6b-4055-8e06-755ebe123c89" alt="Where Does Your GST Actually Go?" loading="lazy">
+      </div>
+      <div class="clip-body">
+        <div class="clip-tc">INSTAGRAM // REEL</div>
+        <div class="clip-title">Where Does Your GST Actually Go?</div>
+        <div class="clip-caption">Data-driven storytelling — breaking down a Rs 500–600 billion tax leakage figure with clear on-screen numbers and pacing to hold attention through a dry topic.</div>
+      </div>
+    </div>
+
+    <div class="clip">
+      <a class="stretch" href="https://www.tiktok.com/@zohaib.zaryab/video/7644518090587327766" target="_blank" rel="noopener"></a>
+      <div class="clip-media ratio-port">
+        <div class="play-badge"></div>
+        <img src="https://github.com/user-attachments/assets/43c50e40-44e6-4ebc-9b06-fa9332ac44c7" alt="The Hidden Cost of Your Electricity Bill" loading="lazy">
+      </div>
+      <div class="clip-body">
+        <div class="clip-tc">TIKTOK // VIDEO</div>
+        <div class="clip-title">The Hidden Cost of Your Electricity Bill</div>
+        <div class="clip-caption">Complex utility-billing breakdown simplified through data visualization and structured pacing — same retention-first approach as the tax series.</div>
+      </div>
+    </div>
+
+    <div class="clip">
+      <a class="stretch" href="https://www.instagram.com/reel/Da2UiLWMXa_/" target="_blank" rel="noopener"></a>
+      <div class="clip-media ratio-port">
+        <div class="play-badge"></div>
+        <img src="https://github.com/user-attachments/assets/9f85115f-ea92-47a6-bb89-a0834dbeee60" alt="Iran's Nuclear Edge" loading="lazy">
+      </div>
+      <div class="clip-body">
+        <div class="clip-tc">INSTAGRAM // REEL</div>
+        <div class="clip-title">Iran's Nuclear Edge</div>
+        <div class="clip-caption">Geopolitical explainer edit — layered data (uranium stockpile figures) visualized with motion graphics and suspenseful pacing.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 3D CAMERA -->
+<section id="camera3d">
+  <div class="label">Track 04 — Spatial</div>
+  <h2 class="section-title">3D Camera &amp; Map Animation</h2>
+  <p class="section-desc">GeoLayers 3-driven map animation and 3D camera movement — added here as pieces are produced.</p>
+  <div class="grid wide">
+    <div class="clip placeholder">
+      <div class="ph-inner">
+        <strong>Coming Soon</strong>
+        GeoLayers 3 map &amp; camera animation samples will be added to this track next.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RECOGNITION -->
+<section id="recognition">
+  <div class="label amber">Track 05 — Recognition</div>
+  <h2 class="section-title">Achievements</h2>
+  <div class="recognition-wrap">
+    <div class="award-card">
+      <div class="award-title">IM4Climate Punjab — Top-Performing Creator</div>
+      <p class="award-text">Selected as a top performer in the IM4Climate program (Environmental Protection &amp; Climate Change Department, Government of Punjab). Produced a climate-awareness video on Pakistan's flood crisis that crossed 500K+ views, earning a cheque award and official recognition at the program's 1st ceremony (December 5, 2025).</p>
+      <div class="award-stat-row">
+        <div class="award-stat"><b>500K+</b><span>VIDEO VIEWS</span></div>
+        <div class="award-stat"><b>₨100,000</b><span>CASH AWARD</span></div>
+        <div class="award-stat"><b>1ST</b><span>CEREMONY FEATURE</span></div>
+      </div>
+    </div>
+    <div class="recog-media">
+      <img src="https://github.com/user-attachments/assets/6f9a5cb5-5405-4157-874f-de4039c87ed8" alt="IM4Climate award proof">
+      <video controls preload="metadata" src="https://github.com/user-attachments/assets/bb76acaf-fc4b-40dd-9494-a450507bcb1a">
+        Your browser does not support embedded video. <a href="https://github.com/user-attachments/assets/bb76acaf-fc4b-40dd-9494-a450507bcb1a">Watch it here.</a>
+      </video>
+    </div>
+  </div>
+</section>
+
+<!-- REACH -->
+<section id="reach" style="padding-bottom:20px;">
+  <div class="label teal">Reach &amp; Audience</div>
+  <h2 class="section-title">Across Platforms</h2>
+  <div class="stat-grid">
+    <div class="stat-cell">
+      <div class="stat-num">10K+</div>
+      <div class="stat-label">TikTok Followers</div>
+      <div class="meter"><i style="width:70%"></i></div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-num">17K+</div>
+      <div class="stat-label">Facebook Followers</div>
+      <div class="meter"><i style="width:90%"></i></div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-num">4.6K+</div>
+      <div class="stat-label">YouTube Subscribers</div>
+      <div class="meter"><i style="width:45%"></i></div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-num">2.1K+</div>
+      <div class="stat-label">Instagram Followers</div>
+      <div class="meter"><i style="width:30%"></i></div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-num">700K+</div>
+      <div class="stat-label">TikTok Total Likes</div>
+      <div class="meter"><i style="width:80%"></i></div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-num">138</div>
+      <div class="stat-label">TikTok Videos Posted</div>
+      <div class="meter"><i style="width:55%"></i></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER / CONTACT -->
+<footer id="contact">
+  <div class="footer-top">
+    <div class="footer-cta">
+      <h2>Let's cut something worth watching.</h2>
+      <p>Currently available for freelance video editing &amp; content editing projects — short-form, documentary, or motion-graphics-heavy.</p>
+      <div class="hero-cta" style="margin-top:22px;">
+        <a class="btn btn-primary" href="https://wa.me/+923706397005">Chat on WhatsApp</a>
+        <a class="btn btn-ghost" href="mailto:zohaibdesigns0@gmail.com">Email Me</a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="https://www.instagram.com/_zohaibzaryab" target="_blank" rel="noopener">Instagram — @_zohaibzaryab</a>
+      <a href="https://www.tiktok.com/@zohaib.zaryab" target="_blank" rel="noopener">TikTok — @zohaib.zaryab</a>
+      <a href="https://youtube.com/@zohaibzaryab" target="_blank" rel="noopener">YouTube — @zohaibzaryab</a>
+      <a href="https://www.linkedin.com/in/zohaib-zaryab-356599351/" target="_blank" rel="noopener">LinkedIn — Zohaib Zaryab</a>
+      <a href="mailto:zohaibdesigns0@gmail.com">zohaibdesigns0@gmail.com</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 ZOHAIB ZARYAB — VIDEO EDITOR</span>
+    <span>BUILT FRAME BY FRAME</span>
+  </div>
+</footer>
+
+<script>
+  // scrub bar
+  const fill = document.getElementById('scrubFill');
+  window.addEventListener('scroll', () => {
+    const h = document.documentElement;
+    const pct = (h.scrollTop) / (h.scrollHeight - h.clientHeight) * 100;
+    fill.style.width = pct + '%';
+  });
+
+  // reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in-view'); });
+  }, {threshold: 0.15});
+  document.querySelectorAll('.clip').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
